@@ -11,22 +11,9 @@
     <%include ./header%>
     <div style="margin-bottom:50px;"></div>
     <div class="version_show">
-        <div>v0.67</div>
-        <div>v0.66</div>
-        <div>v0.65</div>
-        <div>v0.64</div>
-        <div>v0.67</div>
-        <div>v0.66</div>
-        <div>v0.65</div>
-        <div>v0.64</div>
-        <div>v0.67</div>
-        <div>v0.66</div>
-        <div>v0.65</div>
-        <div>v0.64</div>
-        <div>v0.67</div>
-        <div>v0.66</div>
-        <div>v0.65</div>
-        <div>v0.64</div>
+        <%for(var i in items){%>
+        <div><%=items[i]%></div>
+        <%}%>
     </div>
     <!--<div>-->
         <!--<div class="input_div">-->

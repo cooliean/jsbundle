@@ -49,7 +49,18 @@
         console.log( data );
       }
     });
+  });
 
+  $('#version_change').on('click', function(e){
+    var fileName = $(e.srcElement).attr('_filename');
+    //替换主bundle文件
+    $.post('/bundle',{name: fileName}, function(data){
+      if(data.status){
+        $('.selectTitle').text(fileName.split('@_')[1]);
+      }else{
+        alert('更新失败');
+      }
+    });
   });
 
   /*修改底部active*/

@@ -11,6 +11,7 @@ var index = require('./render/index');
 var upload = require('./render/upload');
 var about = require('./render/about');
 
+var bundleServer = require('./service/bundle');
 var loginServer = require('./service/login');
 var uploadServer = require('./service/upload');
 
@@ -46,6 +47,8 @@ app.use('/service/upload', uploadServer);
 
 app.use('/index', index);
 app.use('/about', about);
+
+app.use('/bundle', bundleServer);
 
 
 

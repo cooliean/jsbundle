@@ -22,11 +22,14 @@ router.get('/', function(req, res, next) {
     });
   }
 
+  var version = fs.readFileSync('public/version.json');
+
   res.render('index', {
     user: req.session.user || '',
     headerTitle: '列表',
     items: items,
-    files: files
+    files: files,
+    version: JSON.parse(version.toString()).name
   });
 });
 

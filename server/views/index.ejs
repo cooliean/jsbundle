@@ -9,17 +9,18 @@
     <%include ./css%>
     <body>
         <%include ./header%>
-        <div class="selectTitle">V0.67</div>
-        <%for(var i  in items){%>
-        <div class="list_item">
-            <span class="list_item_version">
-                <i class="fa fa-file-code-o" style="color:#4C4C4C;"></i>
-                <%=items[i].version%>
-            </span>
-            <span class="list_item_time"><%=items[i].time%></span>
+        <div class="selectTitle"><%=version%></div>
+        <div id="version_change">
+            <%for(var i  in items){%>
+            <div class="list_item" _filename="<%=files[i]%>">
+                <span class="list_item_version">
+                    <i class="fa fa-file-code-o" style="color:#4C4C4C;"></i>
+                    <%=items[i].version%>
+                </span>
+                <span class="list_item_time" _filename="<%=files[i]%>"><%=items[i].time%></span>
+            </div>
+            <%}%>
         </div>
-        <%}%>
-
         <div style="margin-bottom: 60px;"></div>
 
         <!--加载模板尾部-->
