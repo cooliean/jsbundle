@@ -4,7 +4,7 @@
   $('.login_btn').on('click', function(){
     var username = $('#username').val();
     var password = $('#password').val();
-    $.post('/login', {
+    $.post('/service/login', {
       username: username,
       password: password
     }, function(data){
@@ -29,6 +29,28 @@
     addActive('about');
   }
 
+  /*文件上传类型校验*/
+  $('#code_file').on('change', function(){
+    var file = this.files[0];
+    var name = file.name;
+    var size = file.size;
+    var type = file.type;
+    $('#file_name').text(name);
+
+    var formData = new FormData($('form')[0]);
+    $.ajax({
+      url: "/service/upload",
+      type: "POST",
+      data: formData,
+      enctype: 'multipart/form-data',
+      processData: false,
+      contentType: false,
+      success: function(data){
+        console.log( data );
+      }
+    });
+
+  });
 
   /*修改底部active*/
   function addActive(name){
@@ -41,13 +63,8 @@
     $('#about_menu i').removeClass('icon_active');
     $('#about_menu .icon_text').removeClass('icon_active');
 
-    console.log(name);
     $('#' + name + '_menu i').addClass('icon_active');
     $('#' + name + '_menu .icon_text').addClass('icon_active');
   }
-
-
-
-
 
 })($, window,undefined);

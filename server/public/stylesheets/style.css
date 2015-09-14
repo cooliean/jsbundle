@@ -12,6 +12,10 @@ a {
   color: #00B7FF;
 }
 
+.fl{
+  float: left;
+}
+
 .header{
   width:100%;
   height:40px;
@@ -287,3 +291,16 @@ a{
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
+
+.upload_file_input{
+  opacity:0;
+  -moz-opacity: 0;
+  width:96%;
+  margin-left: 2%;
+  margin-left:5px;
+  margin-top:-32px;
+  height:33px;
+  border:1px solid red;
+}
+
+

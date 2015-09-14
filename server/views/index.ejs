@@ -10,13 +10,13 @@
     <body>
         <%include ./header%>
         <div class="selectTitle">V0.67</div>
-        <%for(var i = 0; i < 10; i++){%>
+        <%for(var i  in items){%>
         <div class="list_item">
             <span class="list_item_version">
                 <i class="fa fa-file-code-o" style="color:#4C4C4C;"></i>
-                V0.65
+                <%=items[i].version%>
             </span>
-            <span class="list_item_time">2015/10/1 08:45</span>
+            <span class="list_item_time"><%=items[i].time%></span>
         </div>
         <%}%>
 

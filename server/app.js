@@ -10,7 +10,9 @@ var login = require('./render/login');
 var index = require('./render/index');
 var upload = require('./render/upload');
 var about = require('./render/about');
+
 var loginServer = require('./service/login');
+var uploadServer = require('./service/upload');
 
 var app = express();
 
@@ -37,10 +39,14 @@ app.use(session({
 
 /*路由*/
 app.use('/', login);
-app.use('/index', index);
+app.use('/service/login', loginServer);
+
 app.use('/upload', upload);
+app.use('/service/upload', uploadServer);
+
+app.use('/index', index);
 app.use('/about', about);
-app.use('/login', loginServer);
+
 
 
 

@@ -28,21 +28,25 @@
         <div>v0.65</div>
         <div>v0.64</div>
     </div>
+    <!--<div>-->
+        <!--<div class="input_div">-->
+            <!--<input placeholder="请输入版本号，如0.8"/>-->
+        <!--</div>-->
+        <!--<div class="textarea_div">-->
+            <!--<textarea placeholder="请输入该版本新增功能描述"></textarea>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div style="margin-top:40px;line-height:18px;font-size:12px;margin-left:2%;">文件名：版本号@_名称</div>
+    <div style="line-height:18px;font-size:12px;margin-left:2%;">例如：v0.71@_react.jsbundle</div>
     <div>
-        <div class="input_div">
-            <input placeholder="请输入版本号，如0.8"/>
-        </div>
-        <div class="textarea_div">
-            <textarea placeholder="请输入该版本新增功能描述"></textarea>
-        </div>
+        <form enctype="multipart/form-data">
+            <div style="height:40px;width:100%;">
+                <div class="fl commit_file">上传文件</div>
+            </div>
+            <input id="code_file" name="file" type="file" class="upload_file_input"/>
+        </form>
     </div>
-    <div>
-        <div class="upload_file">上传文件</div>
-    </div>
-
-    <div>
-        <div class="commit_file">提交</div>
-    </div>
+    <div id="file_name" class="fl" style="line-height:10px;margin-left:5px;font-size:12px;"></div>
 
     <div style="margin-bottom:60px;"></div>
     <!--加载模板尾部-->
