@@ -8,6 +8,8 @@ var session = require('express-session');
 
 var login = require('./render/login');
 var index = require('./render/index');
+var upload = require('./render/upload');
+var about = require('./render/about');
 var loginServer = require('./service/login');
 
 var app = express();
@@ -36,6 +38,8 @@ app.use(session({
 /*路由*/
 app.use('/', login);
 app.use('/index', index);
+app.use('/upload', upload);
+app.use('/about', about);
 app.use('/login', loginServer);
 
 

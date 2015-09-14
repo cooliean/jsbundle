@@ -1,0 +1,23 @@
+<%if(!user){%>
+<script type="text/javascript">
+    window.location.href = '/';
+</script>
+<%}else{%>
+<!--加载模板head & css-->
+<%include ./head%>
+<link rel='stylesheet' href='/stylesheets/font-awesome.css' />
+<%include ./css%>
+<body>
+    <%include ./header%>
+
+
+
+
+    <div style="margin-bottom: 60px;"></div>
+    <!--加载模板尾部-->
+    <%include ./footer%>
+    <script type="text/javascript" src="javascripts/zepto.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+</body>
+</html>
+<%}%>

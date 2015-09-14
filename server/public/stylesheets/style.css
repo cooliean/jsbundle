@@ -15,11 +15,13 @@ a {
 .header{
   width:100%;
   height:40px;
-  background-color: #368CE9;
+  background-color: #00B5F0;
   color: #fff;
   text-align: center;
   line-height:40px;
   font-size: 17px;
+  position: fixed;
+  top: 0;
 }
 
 .footer_author{
@@ -130,12 +132,13 @@ input, div{
 
 /*选择列表*/
 .selectTitle{
-  color: #368CE9;
+  color: #00B5F0;
   font-size:20px;
   width: 100%;
   height:40px;
   line-height:40px;
   text-align: center;
+  margin-top: 45px;
 }
 
 .list_item{
@@ -164,4 +167,39 @@ input, div{
   margin-right: 5px;
   text-align: right;
   font-size: 13px;
+}
+
+a{
+  text-decoration: none;
+  color:#4E4E4E;
+}
+
+/*footer*/
+.footer{
+  background-color: #F7F7F7;
+  height:40px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top:1px solid #ddd;
+}
+
+.footer>div{
+  float: left;
+  width:33%;
+  text-align: center;
+  margin-top:4px;
+}
+
+.icon_item{
+  color:#747474;
+  font-size:20px;
+}
+
+.icon_text{
+  font-size:12px;margin-top:3px;
+}
+
+.icon_active{
+  color:#00A5E3;
 }
