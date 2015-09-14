@@ -1,74 +1,65 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>偷渡—React Native更新系统</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <!--360极速模式-->
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no" searchtype="map">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="apple-mobile-web-app-title" content="美途">
-    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,minimal-ui">
-    <meta name="misapplication-tap-highlight" content="no" />
-    <!-- uc强制竖屏 -->
-    <meta name="screen-orientation" content="portrait">
-    <!-- QQ强制竖屏 -->
-    <meta name="x5-orientation" content="portrait">
-    <!-- UC强制全屏 -->
-    <meta name="full-screen" content="yes">
-    <!-- QQ强制全屏 -->
-    <meta name="x5-fullscreen" content="true">
-    <!-- UC应用模式 -->
-    <meta name="browsermode" content="application">
-    <!-- QQ应用模式 -->
-    <meta name="x5-page-mode" content="app">
-    <!-- windows phone 点击无高光 -->
-    <meta name="msapplication-tap-highlight" content="no">
-  </head>
-  <body>
-      <!--注册页面-->
-      <div class="logo">
-          <img src="images/logo.jpg"/>
-      </div>
-      <div class="title">
-        偷渡
-      </div>
-      <div class="du_desc">
-          React Native更新系统
-      </div>
-      <div class="login">
-          <div class="login_div">
-              <div class="login_span">
-                  <span>用户名</span>
-              </div>
-              <div class="login_input">
-                  <input id="username" type="text"/>
-              </div>
-          </div>
-          <div class="login_div">
-              <div class="login_span">
-                  <span style="letter-spacing:12px;">密码</span>
-              </div>
-              <div class="login_input">
-                  <input id="pass" type="password"/>
-              </div>
-          </div>
+<%if(!user){%>
+    <script type="text/javascript">
+        window.location.href = '/';
+    </script>
+<%}else{%>
+    <html>
+    <head>
+        <title>偷渡—列表</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/font-awesome.css' />
+        <!--360极速模式-->
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="format-detection" content="telephone=no" searchtype="map">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="apple-mobile-web-app-title" content="偷渡">
+        <!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,minimal-ui">
+        <meta name="misapplication-tap-highlight" content="no" />
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+    </head>
+    <body>
+        <div class="header">
+            更新列表
+        </div>
+        <div class="selectTitle">V0.67</div>
 
-          <div>
-              <div class="login_span">
-                  <span></span>
-              </div>
-              <div class="login_input login_btn">
-                  登录
-              </div>
-          </div>
-      </div>
-      <div class="footer_author">
-          @vczero
-      </div>
-  </body>
-</html>
+        <%for(var i = 0; i < 10; i++){%>
+        <div class="list_item">
+            <span class="list_item_version">
+                <i class="fa fa-file-code-o" style="color:#4C4C4C;"></i>
+                V0.65
+            </span>
+            <span class="list_item_time">2015/10/1 08:45</span>
+        </div>
+        <%}%>
+
+        <div class="list_item" style="background-color:#368CE9;border:0;">
+            <span class="list_item_version" style="color: #FFF;">
+                <i class="fa fa-file-code-o" style="color:#FFF;"></i>
+                V0.65
+            </span>
+            <span class="list_item_time"  style="color: #FFF;">2015/10/1 08:45</span>
+        </div>
+
+        <script type="text/javascript" src="javascripts/zepto.js"></script>
+        <script type="text/javascript" src="javascripts/main.js"></script>
+    </body>
+    </html>
+<%}%>
