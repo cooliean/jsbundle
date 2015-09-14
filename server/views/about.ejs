@@ -1,1 +1,26 @@
-abut
+<%if(!user){%>
+<script type="text/javascript">
+    window.location.href = '/';
+</script>
+<%}else{%>
+<!--加载模板head & css-->
+<%include ./head%>
+<link rel='stylesheet' href='/stylesheets/font-awesome.css' />
+<%include ./css%>
+<body>
+    <%include ./header%>
+    <div style="margin-bottom:50px;"></div>
+    <div style="margin-left:auto;margin-right:auto;width:70px;margin-top:80px;">
+        <img src="images/logo.jpg" style="width:70px;"/>
+    </div>
+    <div style="font-size:12px;margin-left:auto;margin-right:auto;width:200px;margin-top:10px;text-align:center">
+        React Native版本更新系统
+    </div>
+    <div style="margin-bottom:60px;"></div>
+    <!--加载模板尾部-->
+    <%include ./footer%>
+    <script type="text/javascript" src="javascripts/zepto.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+</body>
+</html>
+<%}%>

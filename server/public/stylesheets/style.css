@@ -85,7 +85,9 @@ a {
   width:99%;
   border:1px solid #ddd;
   height:30px;
-  border-radius:3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   outline:none;
   padding-left:5px;
   -webkit-appearance: none;
@@ -125,7 +127,9 @@ input, div{
   text-align:center;
   background-color: #00B7FF;
   line-height:40px;
-  border-radius:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   color:#FFF;
   font-size:16px;
 }
@@ -146,6 +150,8 @@ input, div{
   margin-left: 2%;
   margin-right: 2%;
   border:1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   height: 35px;
   line-height:35px;
@@ -202,4 +208,82 @@ a{
 
 .icon_active{
   color:#00A5E3;
+}
+
+.version_show{
+  width:100%;
+  min-height:50px;
+  overflow-y:auto;
+}
+
+.version_show>div{
+  width:55px;
+  margin-top:5px;
+  height:26px;
+  float:left;
+  margin-left:5px;
+  text-align:center;
+  line-height:26px;
+  border:1px solid #ddd;
+}
+
+.input_div{
+  width:100%;
+  margin-top:10px;
+}
+
+.input_div input{
+  width: 95%;
+  height:35px;
+  font-size:14px;
+  border:1px solid #ccc;
+  outline: none;
+  margin-left:5px;
+  padding-left:5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.textarea_div textarea{
+  margin-left:5px;
+  margin-top:10px;
+  border:1px solid #ccc;
+  width:95%;
+  height:100px;
+  resize: none;
+  outline:none;
+  padding-left:5px;
+  font-size:14px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.upload_file{
+  width:80px;
+  text-align: center;
+  height:30px;
+  line-height:30px;
+  border:1px solid #ccc;
+  margin-left: 5px;
+  margin-top:5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.commit_file{
+  width: 96%;
+  margin-left: 2%;
+  height:35px;
+  background-color:#FBAD00;
+  line-height:35px;
+  text-align:center;
+  color: #fff;
+  margin-top:10px;
+  font-size:16px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
